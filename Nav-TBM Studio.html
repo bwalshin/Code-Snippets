@@ -1,0 +1,416 @@
+<div class="jive-html-text-widget">
+
+    <style type="text/css">
+
+        @font-face {
+
+            font-family:'TitilliumWeb-Regular';
+
+            src: url('/resources/statics/1002/TitilliumWeb-Regular.ttf');
+
+            font-family:'TitilliumWeb-Bold';
+
+            src: url('/resources/statics/1002/TitilliumWeb-Bold.ttf');
+
+        }
+
+        /*  SECTIONS  */
+
+        .section {
+
+            font-family:'TitilliumWeb-Regular', sans-serif;
+
+            clear: both;
+
+            padding: 0px;
+
+            margin: 0px;
+
+        }
+
+        /*  COLUMN SETUP  */
+
+        .col {
+
+            display: block;
+
+            float: left;
+
+            margin: 1% 0 1% 0%;
+
+        }
+
+        .col:first-child {
+
+            margin-left: 0;
+
+        }
+
+        /*  GROUPING  */
+
+        .group:before, .group:after {
+
+            content:"";
+
+            display:table;
+
+        }
+
+        .group:after {
+
+            clear:both;
+
+        }
+
+        .group {
+
+            zoom:1;
+
+            /* For IE 6/7 */
+
+        }
+
+        /*  GRID OF FOUR  */
+
+        .span_4_of_4 {
+
+            width: 100%;
+
+        }
+
+        .span_3_of_4 {
+
+            width: 75%;
+
+        }
+
+        .span_2_of_4 {
+
+            width: 50%;
+
+        }
+
+        .span_1_of_4 {
+
+            width: 33%;
+
+            text-align: center;
+
+            height: 210px;
+
+        }
+
+        /*  GRID OF THREE  */
+
+        .span_3_of_3 {
+
+            width: 100%;
+
+        }
+
+        .span_2_of_3 {
+
+            width: 66.66%;
+
+        }
+
+        .span_1_of_3 {
+
+            width: 33.33%;
+
+        }
+
+        /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+        @media only screen and (max-width: 480px) {
+
+            .col {
+
+                margin: 1% 0 1% 0%;
+
+            }
+
+        }
+
+        @media only screen and (max-width: 480px) {
+
+            .span_4_of_4 {
+
+                width: 100%;
+
+            }
+
+            .span_3_of_4 {
+
+                width: 100%;
+
+            }
+
+            .span_2_of_4 {
+
+                width: 100%;
+
+            }
+
+            .span_1_of_4 {
+
+                width: 100%;
+
+            }
+
+            .span_3_of_3 {
+
+                width: 100%;
+
+            }
+
+            .span_2_of_3 {
+
+                width: 100%;
+
+            }
+
+            .span_1_of_3 {
+
+                width: 100%;
+
+            }
+
+        }
+
+        .cta-top {
+
+            margin-bottom: 0;
+
+        }
+
+        .cta-top .col {
+
+            border-bottom: 1px solid #ddd;
+
+            border-right: 2px solid #ddd;
+
+            border-top: 1px solid #ddd;
+
+            margin-top: 0;
+
+        }
+
+        .cta-top .col:last-child {
+
+            border-right: 0;
+
+        }
+
+        .cta-top .col a {
+
+            display: block;
+
+            text-decoration: none;
+
+            color: #333;
+
+        }
+
+        .cta-top .col a:hover {
+
+            opacity: 0.80;
+
+        }
+
+        .cta-top .col a .title {
+
+            font-family:'TitilliumWeb-Bold', sans-serif;
+
+            font-size: 25px;
+
+            color: #353c45 !important;
+
+            display: block;
+
+            margin-bottom: 7px;
+
+        }
+
+        .cta-top .col a span.text {
+
+            font-size: 13px;
+
+            color: #6f6f6f;
+
+            padding: 10px 20px 0px;
+
+            display: block;
+        }
+
+
+        .cta-top .col a span.text2 {
+
+            font-size: 13px;
+
+            color: #F28505;
+
+            padding: 0 20px 0px;
+
+            display: block;
+        }
+
+
+        .cta-bottom .col a {
+
+            display: block;
+
+            text-decoration: none;
+
+            color: #333;
+
+            margin-left: 12%;
+
+        }
+
+        .cta-bottom .col a:hover {
+
+            opacity: 0.80;
+
+        }
+
+        .cta-bottom .col a .title {
+
+            font-family:'TitilliumWeb-Bold', sans-serif;
+
+            font-size: 17px;
+
+            color: #353c45;
+
+            margin-bottom: 5px;
+
+            display: block;
+
+        }
+
+        .cta-bottom .col a span.text {
+
+            font-size: 12px;
+
+            color: #6f6f6f;
+
+            padding: 0 40px 0 0;
+
+            display: block;
+
+        }
+
+
+        .studio {
+
+            background: url(https://tbmcouncil.jiveon.com/resources/statics/13589/Studio%2BBug.png?a=1462568883889) no-repeat;
+
+            background-size: 23%;
+
+            display: inline-block;
+
+            margin-top: 20px;
+
+            background-position: center;
+
+            width: 300px;
+
+            height: 90px;
+
+        }
+
+        .data {
+
+            background: url(https://tbmcouncil.jiveon.com/resources/statics/13589/data-icon.png?a=1462568603528) no-repeat;
+
+            background-size: 30%;
+
+            display: inline-block;
+
+            margin-top: 20px;
+
+            background-position: center;
+
+            width: 300px;
+
+            height: 90px;
+
+        }
+
+
+        .studio2 {
+
+            background: url(https://tbmcouncil.jiveon.com/resources/statics/13589/Studio%2BBug.png?a=1462568883889) no-repeat;
+            
+			background-size: 100%;
+
+            float: left;
+
+            margin: 5px 20px 20px 0;
+			
+			display: inline-block;
+			
+			width: 45px;
+
+            height: 45px;
+
+        }
+
+
+        .data2 {
+
+            background: url(https://tbmcouncil.jiveon.com/resources/statics/13589/data-icon.png?a=1462568603528) no-repeat;
+            
+			background-size: 100%;
+
+            float: left;
+
+            margin: 5px 20px 20px 0;
+			
+			display: inline-block;
+			
+			width: 60px;
+
+            height: 60px;
+
+        }
+
+
+    </style>
+
+    <div class="section group cta-top">
+
+        <div class="col span_1_of_4" ><a href="/community/apptio/getting-started-with-apptio"><span class="studio"></span> <span class="title"> Studio v11 </span> <!--<span class="text"> //A platform that integrates next-generation analytics, robust data handling, and a pre-defined TBM process.// </span>--></a>
+
+        </div>
+
+        <div class="col span_1_of_4"><a href="/community/apptio/product-central"><span class="studio"></span> <span class="title"> Studio v12 </span> <!--<span class="text"> //A platform that integrates next-generation analytics, robust data handling, and a pre-defined TBM process.// </span>--></a>
+
+        </div>
+
+        <div class="col span_1_of_4"><a href="/community/apptio/tbm-success"><span class="data"></span> <span class="title"> Data For TBM </span> <!--<span class="text"> //A platform that integrates next-generation analytics, robust data handling, and a pre-defined TBM process.// </span>--></a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div>
+    <div class="section group cta-bottom">
+
+        <div class="col span_1_of_3"><a href="/community/apptio/tbm-success/blog"><span class="studio2"></span> <span class="title">Studio v11</span> <span class="text">//A platform that integrates next-generation analytics, robust data handling, and a pre-defined TBM process.//</span></a>
+
+        </div>
+
+        <div class="col span_1_of_3"><a href="https://tbmcouncil.jiveon.com/community/apptio/education-services"><span class="studio2"></span> <span class="title">Studio v12</span> <span class="text">//A platform that integrates next-generation analytics, robust data handling, and a pre-defined TBM process.//</span></a>
+
+        </div>
+
+        <div class="col span_1_of_3"><a href="/community/tbm-connect-help"><span class="data2"></span> <span class="title">Data For TBM</span> <span class="text">//A platform that integrates next-generation analytics, robust data handling, and a pre-defined TBM process.//</span></a>
+
+        </div>
+
+    </div>
+
+</div>

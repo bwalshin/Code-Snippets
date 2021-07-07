@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Customer Dashboard</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  	margin: 0;
+  	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12pt;
+}
+
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+}
+    
+.section h2  {
+    color: #328fbe;
+    font-family: 'AvenirLTStd-Book', sans-serif;
+    font-size: 18px;
+    line-height: 16px;
+    text-align: center;
+	margin-bottom:15px;
+}        
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	margin: 1% 0 0 1%;
+	float: left;
+    text-align: center;
+    outline: 1px solid #999;
+    height: 110px;
+}
+     
+.col:hover {cursor: pointer; background-color: #e9e8e8 ;}    
+
+.col img {
+    margin-top: 15px;
+	height: 30%;
+	margin-bottom: -15px;
+}
+      
+.col h5 {
+    color: #454546;
+    font-family: 'AvenirLTStd-Black', sans-serif;
+    font-size: 14px;
+	margin-bottom: -10px;
+} 
+    
+.col p {
+    color: #454546;
+    font-family: 'AvenirLTStd-Book', sans-serif;
+    font-size: 12px;
+}     
+    
+.col:first-child { margin-left: 7px; }
+	
+.col:last-child {margin-right: 5px; }
+
+	
+/*  COL GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+/*  GRID OF FOUR  */
+.span_1_of_3 { width: 32%; }
+    
+.span_1_of_5 {
+	width: 19%;
+}   
+    
+.span_1_of_2 {
+	width: 49%;
+}    
+
+
+/* Content */
+.content {
+	margin: 5px;
+}
+
+	
+/* Style the footer */
+.footer {
+    background-color: #ff661c;
+    padding: 3px;
+}
+	
+</style>
+</head>
+<body>
+
+<div class="content">
+  <h2>Helpful Dashboard Links</h2>
+</div>
+	
+<div class="section group">	
+	
+    <div class="col span_1_of_5" onclick="window.open('https://apptio.my.workfront.com/report/5e83d5ef028046182cf8955912a2c14d/detail')">
+		<img src="https://content.apptiopm.com/Customer+Dashboard/Icons/group-2.png">
+        <h5>Pending India Approvals</h5>
+		<p>on Workfront</p>
+	</div>
+    
+    <div class="col span_1_of_5" onclick="window.open('https://apptio.my.workfront.com/report/5dc195e700cc4fa0d9f917155bb74ab0/detail')">
+        <img src="https://content.apptiopm.com/Customer+Dashboard/Icons/group-2.png">
+		<h5>Project Delivery Health</h5>
+		<p>on Workfront</p>
+	</div>
+	
+    <div class="col span_1_of_5" onclick="window.open('https://apptio.my.workfront.com/dashboard/5b720679000fbea68d716d9cb8aa9d29/detail')">
+       	<img src="https://content.apptiopm.com/Customer+Dashboard/Icons/group-2.png">
+		<h5>Customer Lookup</h5>
+		<p>on Workfront</p>
+	</div>    
+	
+    <div class="col span_1_of_5" onclick="window.open('https://tbmcouncil.jiveon.com/docs/DOC-10160')">
+       	<img src="https://content.apptiopm.com/Customer+Dashboard/Icons/group-2.png">
+		<h5>Delivery Methodology</h5>
+		<p>on InfoHub</p>
+	</div>  
+	 
+    <div class="col span_1_of_5" onclick="window.open('https://apptio.sharepoint.com/sites/CSCustomers')">
+       	<img src="https://content.apptiopm.com/Customer+Dashboard/Icons/group-2.png">
+		<h5>Customer Sites</h5>
+		<p>on Sharepoint</p>
+	</div>
+	
+</div>
+
+</body>
+</html>
+

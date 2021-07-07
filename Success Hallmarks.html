@@ -1,0 +1,132 @@
+<style type="text/css">
+.success-grid {
+	font-family: Helvetica, sans-serif;
+	background: url(http://i166.photobucket.com/albums/u108/bwalshin/success-bg_zps90fd52cb.png) center center no-repeat;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	max-height: 260px;
+}
+/*  SECTIONS  */
+.success-grid .section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.success-grid .col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.success-grid .col:first-child { margin-left: 0; }
+
+
+/*  GROUPING  */
+.success-grid .group:before,
+.success-grid .group:after {
+	content:"";
+	display:table;
+}
+.success-grid .group:after {
+	clear:both;
+}
+.success-grid .group {
+    zoom:1; /* For IE 6/7 */
+}
+.success-grid a {
+	display: block;
+	clear: both;
+	margin: 15px 0 17px 15px;
+	text-decoration: none;
+	font-size: 22px;
+	padding: 10px;
+	color: #fff;
+}                                               
+.success-grid a i {
+	float: left;
+	margin: -10px 10px 15px;
+	background: url(/resources/statics/1025/sprite-success.png) no-repeat top left;
+	display: inline-block;
+}				
+.success-grid a span {
+	display: block;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+.success-grid a:hover {
+	opacity: 0.70;
+}
+/* SPRITES */
+.success-grid a i.icn-evolution{ background-position: 0 0; width: 50px; height: 50px; } 
+.success-grid a i.icn-governance{ background-position: 0 -100px; width: 50px; height: 50px; } 
+.success-grid a i.icn-insights{ background-position: 0 -200px; width: 50px; height: 50px; } 
+.success-grid a i.icn-processes{ background-position: 0 -300px; width: 50px; height: 50px; } 
+.success-grid a i.icn-roadmap{ background-position: 0 -400px; width: 50px; height: 50px; } 
+.success-grid a i.icn-spans{ background-position: 0 -500px; width: 50px; height: 50px; } 
+
+/*  GRID OF TWO  */
+.success-grid .span_2_of_2 {
+	width: 100%;
+}
+.success-grid .span_1_of_2 {
+	width: 49.2%;
+}
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.success-grid .col { 
+		margin: 1% 0 1% 0%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.success-grid .span_2_of_2 {
+		width: 100%; 
+	}
+	.success-grid .span_1_of_2 {
+		width: 100%;
+	}
+}
+</style>
+
+<div class="success-grid">
+	<div class="section group">
+		<div class="col span_1_of_2">
+			<a href="https://apptio.jiveon.com/community/tbm-success/content?filterID=contentstatus%5Bpublished%5D~category%5Btbm-roadmap%5D">
+				<i class="icn-roadmap"></i>
+				Roadmap
+				<span>Aligned with initiatives</span>
+			</a>
+			<a href="https://apptio.jiveon.com/community/tbm-success/content?filterID=contentstatus%5Bpublished%5D~category%5Btbm-process%5D">
+				<i class="icn-processes"></i>
+				TBM Processes
+				<span>2+ Operationalized</span>
+			</a>
+			<a href="https://apptio.jiveon.com/community/tbm-success/content?filterID=contentstatus%5Bpublished%5D~category%5Btbm-spans-it-finance%5D">
+				<i class="icn-spans"></i>
+				Spans IT &amp; Finance
+				<span>Key Stakeholders</span>
+			</a>
+		</div>
+		<div class="col span_1_of_2">
+			<a href="https://apptio.jiveon.com/community/tbm-success/content?filterID=contentstatus%5Bpublished%5D~category%5Btbm-governance%5D">
+				<i class="icn-governance"></i>
+				TBM Governance
+				<span>Program - Office - TBMA</span>
+			</a>
+			<a href="https://apptio.jiveon.com/community/tbm-success/content?filterID=contentstatus%5Bpublished%5D~category%5Btbm-insights%5D">
+				<i class="icn-insights"></i>
+				Insights
+				<span>Decision Making Engine</span>
+			</a>
+			<a href="https://apptio.jiveon.com/community/tbm-success/content?filterID=contentstatus%5Bpublished%5D~category%5Btbm-evolution%5D">
+				<i class="icn-evolution"></i>
+				Evolution
+				<span>Data - Allocations - Capability</span>
+			</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,455 @@
+<div class="jive-html-text-widget">
+
+    <style type="text/css">
+
+        /*@font-face {
+
+            font-family:'TitilliumWeb-Regular';
+
+            src: url('/resources/statics/1002/TitilliumWeb-Regular.ttf');
+
+            font-family:'TitilliumWeb-Bold';
+
+            src: url('/resources/statics/1002/TitilliumWeb-Bold.ttf');
+
+        }*/
+
+        /*  SECTIONS  */
+
+        .section {
+
+            font-family:'TitilliumWeb-Regular', sans-serif;
+
+            clear: both;
+
+            padding: 0px;
+
+            margin: 0px;
+
+        }
+
+        /*  COLUMN SETUP  */
+
+        .col {
+
+            display: block;
+
+            float: left;
+
+            margin: 1% 0 1% 0%;
+
+        }
+
+        .col:first-child {
+
+            margin-left: 0;
+
+        }
+
+        /*  GROUPING  */
+
+        .group:before, .group:after {
+
+            content:"";
+
+            display:table;
+
+        }
+
+        .group:after {
+
+            clear:both;
+
+        }
+
+        .group {
+
+            zoom:1;
+
+            /* For IE 6/7 */
+
+        }
+
+        /*  GRID OF FOUR  */
+
+        .span_4_of_4 {
+
+            width: 100%;
+
+        }
+
+        .span_3_of_4 {
+
+            width: 75%;
+
+        }
+
+        .span_2_of_4 {
+
+            width: 50%;
+
+        }
+
+        .span_1_of_4 {
+
+            width: 33%;
+
+            text-align: center;
+
+            height: 210px;
+
+        }
+
+        /*  GRID OF THREE  */
+
+        .span_3_of_3 {
+
+            width: 100%;
+
+        }
+
+        .span_2_of_3 {
+
+            width: 66.66%;
+
+        }
+
+        .span_1_of_3 {
+
+            width: 33.33%;
+
+        }
+
+        /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+        @media only screen and (max-width: 480px) {
+
+            .col {
+
+                margin: 1% 0 1% 0%;
+
+            }
+
+        }
+
+        @media only screen and (max-width: 480px) {
+
+            .span_4_of_4 {
+
+                width: 100%;
+
+            }
+
+            .span_3_of_4 {
+
+                width: 100%;
+
+            }
+
+            .span_2_of_4 {
+
+                width: 100%;
+
+            }
+
+            .span_1_of_4 {
+
+                width: 100%;
+
+            }
+
+            .span_3_of_3 {
+
+                width: 100%;
+
+            }
+
+            .span_2_of_3 {
+
+                width: 100%;
+
+            }
+
+            .span_1_of_3 {
+
+                width: 100%;
+
+            }
+
+        }
+
+        .cta-top {
+
+            margin-bottom: 0;
+
+        }
+
+        .cta-top .col {
+
+            border-bottom: 1px solid #ddd;
+
+            border-right: 2px solid #ddd;
+
+            border-top: 1px solid #ddd;
+
+            margin-top: 0;
+
+        }
+
+        .cta-top .col:last-child {
+
+            border-right: 0;
+
+        }
+
+        .cta-top .col a {
+
+            display: block;
+
+            text-decoration: none;
+
+            color: #333;
+
+        }
+
+        .cta-top .col a:hover {
+
+            opacity: 0.80;
+
+        }
+
+        .cta-top .col a .title {
+
+            font-family:'TitilliumWeb-Bold', sans-serif;
+
+            font-size: 25px;
+
+            color: #353c45 !important;
+
+            display: block;
+
+            margin-bottom: 7px;
+
+        }
+
+        .cta-top .col a span.text {
+
+            font-size: 13px;
+
+            color: #6f6f6f;
+
+            padding: 10px 20px 0px;
+
+            display: block;
+        }
+
+
+        .cta-bottom .col a {
+
+            display: block;
+
+            text-decoration: none;
+
+            color: #333;
+
+            margin-left: 12%;
+
+        }
+
+        .cta-bottom .col a:hover {
+
+            opacity: 0.80;
+
+        }
+
+        .cta-bottom .col a .title {
+
+            font-family:'TitilliumWeb-Bold', sans-serif;
+
+            font-size: 17px;
+
+            color: #353c45;
+			
+			/*margin-top: 13%;*/
+			
+            margin-bottom: 5px;
+			
+			padding-top: 10px;
+
+            display: block;
+						
+        }
+
+        .cta-bottom .col a span.text {
+
+            font-size: 12px;
+
+            color: #6f6f6f;
+
+            padding: 0 40px 0 0;
+
+            display: block;
+
+        }
+		
+		.cta-bottom .col a .title2 {
+
+            font-family:'TitilliumWeb-Bold', sans-serif;
+
+            font-size: 17px;
+
+            color: #353c45;
+			
+			/*margin-top: 13%;*/
+			
+            margin-bottom: 5px;
+			
+			padding-top: 20px;
+
+            display: block;
+						
+        }
+
+        .cta-bottom .col a span.text2 {
+
+            font-size: 12px;
+
+            color: #6f6f6f;
+
+            padding: 0 40px 0 0;
+
+            display: block;
+
+        }
+
+        .ct, .itp, .itb, .bi, .bofit, .studio, .cloud, .dl, .api {
+
+            background: url(https://tbmcouncil.jiveon.com/resources/statics/1018/Product%2BCentral%2BSprite.png?a=1491245981691) no-repeat;
+
+            background-size: 1300%;
+
+            display: inline-block;
+
+			float: left;
+
+            margin: 10px 20px 20px 0;
+			
+            width: 87px;
+
+            height: 89px;
+
+        }
+		
+		.atum, .api {
+
+            background: url(https://tbmcouncil.jiveon.com/resources/statics/1018/Product%2BCentral%2BSprite.png?a=1491245981691) no-repeat;
+
+            background-size: 1500%;
+
+            display: inline-block;
+
+			float: left;
+
+            margin: 0px 20px 20px 0;
+			
+            width: 87px;
+
+            height: 89px;
+
+        }
+
+        .ct {
+
+            background-position: -225px 0px;
+			
+        }
+		
+		.itp {
+
+            background-position: 0px 0px;
+			
+        }
+				
+		.itb {
+
+            background-position: -338px 0px;
+			
+        }
+
+		.bi {
+
+            background-position: -111px 0px;
+			
+        }
+		
+		.bofit {
+
+            background-position: -450px 0px;
+			
+        }
+
+		.studio {
+
+            background-position: -563px 0px;
+			
+        }
+		
+		.cloud {
+
+            background-position: -673px 0px;
+			
+        }
+		
+		.dl {
+
+            background-position: -874px 0px;
+			
+        }
+		
+		.atum {
+
+            background-position: -905px 0px;
+						
+        }
+
+    </style>
+
+
+    <div class="section group cta-bottom">
+
+        <div class="col span_1_of_3"><a href="/community/apptio/product-central/cost-transparency"><span class="ct"></span> <span class="title">Cost Transparency</span> <span class="text">Foundation </br> Applications &amp; Services </br> Business Units</span> </a>
+
+        </div>
+
+        <div class="col span_1_of_3"><a href="/community/apptio/product-central/itplanning"><span class="itp"></span> <span class="title">IT Planning</span> <span class="text">Align IT resource, project, and service investments to business priorities</span> </a>
+
+        </div>
+
+        <div class="col span_1_of_3"><a href="/community/apptio/product-central/bill-of-it"><span class="bofit"></span> <span class="title">Bill of IT</span> <span class="text">Operationalize your showback or chargeback process to optimize IT investments</span> </a>
+
+        </div>
+        
+        <div class="col span_1_of_3"><a href="/community/apptio/product-central/it-benchmarking"><span class="itb"></span> <span class="title">IT Benchmarking</span> <span class="text">Benchmark against your chosen peers to know where you stand and where you can improve</span> </a>
+
+        </div>
+
+        <div class="col span_1_of_3"><a href="/community/apptio/product-central/business-insights"><span class="bi"></span> <span class="title">Business Insights </span> <span class="text">Vendor Insights </br> SaaS Insights (Office 365, Salesforce) </br> Infrastructure Insights </br> Application Insights</span></a>
+
+        </div>
+        
+        <div class="col span_1_of_3"><a href="/community/apptio/product-central/cost-transparency/cloud"><span class="cloud"></span> <span class="title">Cloud</span> <span class="text">Cloud analytics for Cost Transparency</span></a>
+
+        </div>
+
+      
+        <div class="col span_1_of_3"><a href="/community/apptio/product-central/tbm-studio"><span class="studio"></span> <span class="title">TBM Studio</span> <span class="text"> Data Studio </br> Model Studio </br> Report Studio</span> </a>
+
+        </div>
+
+        <div class="col span_1_of_3"><a href="/community/apptio/product-central/tbm-studio/data-for-tbm"><span class="dl"></span> <span class="title">Data For TBM </span> <span class="text"> DataLink 4.0, 3.0 </br> Data Connections </span></a>
+
+        </div>
+
+        <div class="col span_1_of_3"><a href="/community/apptio/product-central/atum"><span class="atum"></span> <span class="title">ATUM</span> <span class="text"> The Apptio TBM Unified Model </span></a>
+
+        </div>

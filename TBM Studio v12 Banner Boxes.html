@@ -1,0 +1,332 @@
+<div class="jive-html-text-widget">
+
+    <style type="text/css">
+
+        @font-face {
+
+            font-family:'TitilliumWeb-Regular';
+
+            src: url('/resources/statics/1002/TitilliumWeb-Regular.ttf');
+
+            font-family:'TitilliumWeb-Bold';
+
+            src: url('/resources/statics/1002/TitilliumWeb-Bold.ttf');
+
+        }
+
+        /*  SECTIONS  */
+
+        .section {
+
+            font-family:'TitilliumWeb-Regular', sans-serif;
+
+            clear: both;
+
+            padding: 0px;
+			
+            margin: 15px;
+			
+			background: #f2f2f2;
+			
+			border-bottom: 1px solid #ddd;
+
+            border-right: 1px solid #ddd;
+			
+			border-left: 1px solid #ddd;
+			
+            border-top: 1px solid #ddd;
+
+						
+        }
+
+        /*  COLUMN SETUP  */
+
+        .col {
+
+            display: block;
+
+            float: left;
+
+            margin: 1% 0 1% 0%;
+			
+			border-collapse: collapse;
+			
+			border-left: 1px solid #ddd;
+			
+        }
+
+        .col:first-child {
+
+            margin-left: 0;
+
+        }
+
+        /*  GROUPING  */
+
+        .group:before, .group:after {
+
+            content:"";
+
+            display:table;
+			
+        }
+
+        .group:after {
+
+            clear:both;
+
+        }
+
+        .group {
+
+            zoom:1;
+
+            /* For IE 6/7 */
+
+        }
+
+        /*  GRID OF FOUR  */
+
+        .span_4_of_4 {
+
+            width: 100%;
+
+        }
+
+        .span_3_of_4 {
+
+            width: 75%;
+
+        }
+
+        .span_2_of_4 {
+
+            width: 49%;
+
+        }
+
+        .span_1_of_4 {
+
+            width: 24%;
+
+        }
+
+        /*  GRID OF THREE  */
+
+        .span_3_of_3 {
+
+            width: 100%;
+
+        }
+
+        .span_2_of_3 {
+
+            width: 66.66%;
+
+        }
+
+        .span_1_of_3 {
+
+            width: 33.33%;
+
+        }
+
+        /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+        @media only screen and (max-width: 480px) {
+
+            .col {
+
+                margin: 1% 0 1% 0%;
+
+            }
+
+        }
+
+        @media only screen and (max-width: 480px) {
+
+            .span_4_of_4 {
+
+                width: 100%;
+
+            }
+
+            .span_3_of_4 {
+
+                width: 100%;
+
+            }
+
+            .span_2_of_4 {
+
+                width: 100%;
+
+            }
+
+            .span_1_of_4 {
+
+                width: 100%;
+
+            }
+
+            .span_3_of_3 {
+
+                width: 100%;
+
+            }
+
+            .span_2_of_3 {
+
+                width: 100%;
+
+            }
+
+            .span_1_of_3 {
+
+                width: 100%;
+
+            }
+
+        }
+
+        .cta-top {
+
+            margin-bottom: 0;
+
+        }
+
+        .cta-top .col {
+
+            border-bottom: 1px solid #ddd;
+
+            border-right: 2px solid #ddd;
+
+            border-top: 1px solid #ddd;
+
+            margin-top: 0;
+
+        }
+
+        .cta-top .col:last-child {
+
+            border-right: 0;
+
+        }
+
+        .cta-top .col a {
+
+            display: block;
+
+            text-decoration: none;
+
+            color: #333;
+
+        }
+
+        .cta-top .col a:hover {
+
+            opacity: 0.80;
+
+        }
+
+        .cta-top .col a .title {
+
+            font-family:'TitilliumWeb-Bold', sans-serif;
+
+            font-size: 25px;
+
+            color: #353c45 !important;
+
+            display: block;
+
+            margin-bottom: 7px;
+
+        }
+
+        .cta-top .col a span.text {
+
+            font-size: 13px;
+
+            color: #6f6f6f;
+
+            padding: 10px 20px 0px;
+
+            display: block;
+        }
+
+        .cta-bottom .col a {
+
+            display: block;
+
+            text-decoration: none;
+
+            color: #333;
+
+            margin-left: 5%;
+
+        }
+
+        .cta-bottom .col a:hover {
+
+            opacity: 0.80;
+
+        }
+
+        .cta-bottom .col a .title {
+
+            font-family:'TitilliumWeb-Bold', sans-serif;
+
+
+            font-size: 17px;
+
+            color: #353c45;
+
+            margin-bottom: 5px;
+
+            display: block;
+			
+			vertical-align: middle;
+			
+        }
+
+        .cta-bottom .col a span.text {
+
+            font-size: 12px;
+
+            color: #6f6f6f;
+
+            padding: 0 5px 10px 0;
+
+            display: block;
+
+        }
+		
+    </style>
+
+    <div class="section group cta-bottom">
+
+        <div class="col span_1_of_4"><a href="https://s3-us-west-2.amazonaws.com/communityfiles.apptio.com/Education+Services/01+What%27s+New/presentation.html"><span class="title">Overview</span> <span class="text">Get a 10 min Introduction
+to the new features and benefits in this release.</span></a>
+        </div>
+        
+        <div class="col span_1_of_4"><a href="/docs/DOC-5135"><span class="title">Feature List</span> <span class="text">Read what‘s new in Studio.</span></a>
+        </div>
+        
+        <div class="col span_1_of_4"><a href="/docs/DOC-5468"><span class="title">Enablement</span> <span class="text">Upgrading from 11.8? Learn from these self-paced courses.</span></a>
+        <a href="/community/apptio/education-services/course-list/overview"> <span class="text"> If you are a new customer, enable via Apptio University. </span></a>
+        </div>
+        
+        <div class="col span_1_of_4"><a href="/docs/DOC-5062"><span class="title">Get Started Guide</span> <span class="text">Read the getting started guide if your about to implement or upgrade to this release.</span></a>
+        </div>
+
+    </div>
+
+      <div class="section group cta-bottom">
+
+        <div class="col span_2_of_4"><a href="/docs/DOC-5493"><span class="title">What Customers Are Saying!</span> <span class="text">See initial impressions on Studio v12 from Lance Warner of First American and Brian Wolk from Cox Automotive.</span></a>
+        </div>
+        
+        <div class="col span_2_of_4"><a href="http://www.surveygizmo.com/s3/2902227/TBM-Studio-v12-Upgrade-Request"><span class="title">Click Here to Request More Information</span> <span class="text">Click here to request your Apptio instance.</span></a>
+        </div>
+  
+</div>

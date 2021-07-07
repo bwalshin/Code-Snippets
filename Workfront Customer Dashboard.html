@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Customer Dashboard</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  	margin: 0;
+  	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12pt;
+}
+
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+    
+.section h2  {
+    color: #328fbe;
+    font-family: 'AvenirLTStd-Book', sans-serif;
+    font-size: 18px;
+    line-height: 16px;
+    text-align: center;
+	margin-bottom:15px;
+}        
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	margin: 1% 0 0 1%;
+	float: left;
+    text-align: center;
+    outline: 1px solid #999;
+    height: 110px;
+}
+     
+.col:hover {cursor: pointer; background-color: #e9e8e8 ;}    
+
+.col img {
+    margin-top: 15px;
+	height: 30%;
+	margin-bottom: -15px;
+}
+      
+.col h5 {
+    color: #454546;
+    font-family: 'AvenirLTStd-Black', sans-serif;
+    font-size: 14px;
+	margin-bottom: -10px;
+} 
+    
+.col p {
+    color: #454546;
+    font-family: 'AvenirLTStd-Book', sans-serif;
+    font-size: 12px;
+}     
+    
+ .col:first-child { margin-left: 12px; }
+
+	
+/*  COL GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+/*  GRID OF FOUR  */
+.span_1_of_3 { width: 32%; }
+    
+.span_1_of_5 {
+	width: 19%;
+}   
+    
+.span_1_of_2 {
+	width: 49%;
+}    
+
+
+/* Content */
+.content {
+	margin: 5px;
+}
+
+	
+/* Style the footer */
+.footer {
+    background-color: #ff661c;
+    padding: 3px;
+}
+	
+</style>
+</head>
+<body>
+
+<div class="content">
+  <h2>Welcome to Workfront!</h2>
+  <p>	You have been in invited to use Workfront! Apptio uses Workfront to manage and track projects to ensure everything is on time and running as excepted. This page will help you get to know Workfront and how you can use it to watch your projects come to life.</p>
+</div>
+	
+<div class="section group">	
+    <div class="col span_1_of_3" onclick="window.open('https://s3-us-west-2.amazonaws.com/workfront-files/Customer+Dashboard/Workfront+Customer+Guide.pdf')">
+		<img src="https://s3-us-west-2.amazonaws.com/workfront-files/Customer+Dashboard/Icons/group-2.png">
+        <h5>Customer Guide</h5>
+		<p>for Workfront</p>
+	</div>
+    
+    <div class="col span_1_of_3" onclick="window.open('https://tbmcouncil.jiveon.com/community/apptio/education-services')">
+        <img src="https://s3-us-west-2.amazonaws.com/workfront-files/Customer+Dashboard/Icons/mortarboard.png">
+		<h5>Education Services</h5>
+		<p>on TBM Connect</p>
+	</div>    
+ 
+    <div class="col span_1_of_3" onclick="window.open('https://tbmcouncil.jiveon.com/community/apptio/product-central/')">
+       	<img src="https://s3-us-west-2.amazonaws.com/workfront-files/Customer+Dashboard/Icons/menu.png">
+		<h5>Product Central</h5>
+		<p>on TBM Connect</p>
+	</div>  
+	
+</div>
+
+</body>
+</html>
+
