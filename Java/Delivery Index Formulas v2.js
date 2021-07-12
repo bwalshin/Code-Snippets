@@ -94,40 +94,77 @@ IF(Project Current Phase = "Discover and Plan" && { RAG - Not prepared to rollou
 // Field - Not prepared to rollout. No Change agent / No comms plan / No Rollout plan
 IF({ Not prepared to rollout.No Change agent / No comms plan / No Rollout plan}="Yes" && Project Current Phase = "Discover and Plan", "AMBER",
     IF({ Not prepared to rollout.No Change agent / No comms plan / No Rollout plan}="Yes" && Project Current Phase = "Configure", "AMBER",
-        IF({ Not prepared to rollout.No Change agent / No comms plan / No Rollout plan}="Yes" && Project Current Phase = "Rollout", "RED",
+        IF(Not prepared to rollout.No Change agent / No comms plan / No Rollout plan}="Yes" && Project Current Phase = "Rollout", "RED",
             "GREEN")))
 
 // Field - No baseline process or use cases discussed or understood
-IF(No baseline process or use cases discussed or understood = "Yes" && Project Current Phase = "Discover and Plan", "AMBER",
-    IF(No baseline process or use cases discussed or understood = "Yes" && Project Current Phase = "Configure", "RED",
-        IF(No baseline process or use cases discussed or understood = "Yes" && Project Current Phase = "Rollout", "RED",
+IF( No baseline process or use cases discussed or understood = "Yes" && Project Current Phase = "Discover and Plan", "AMBER",
+    IF( No baseline process or use cases discussed or understood = "Yes" && Project Current Phase = "Configure", "RED",
+        IF( No baseline process or use cases discussed or understood = "Yes" && Project Current Phase = "Rollout", "RED",
             "GREEN")))
 
 ///////////////////////////////////
 // Section - Product Challenges //
 /////////////////////////////////
-..
+IF(Project Current Phase = "Discover and Plan" && RAG - Client has been in Technical escalation for more then 3 wks ="AMBER", "AMBER",
+
+    IF(Project Current Phase = "Configure" && {RAG - Product Gaps or missing functionality}="RED" || {RAG - significant time on workarounds}="RED" || {RAG - Platform performance is negatively impacting}="RED" || {RAG - Client has been in Technical escalation for more then 3 wks}="RED", "RED",
+
+        IF(Project Current Phase = "Rollout" && {RAG - Product Gaps or missing functionality}="RED" || {RAG - significant time on workarounds}="RED" || {RAG - Platform performance is negatively impacting}="RED" || {RAG - Client has been in Technical escalation for more then 3 wks}="RED", "RED",
+            "GREEN")))
 
 // Field - There are Product Gaps or missing functionality with no workaround available
-IF(Project Current Phase = "Discover and Plan", "N/A",
-    IF({ There are Product Gaps or missing functionality with no workaround available } = "Yes" && Project Current Phase = "Discover and Plan", "N/A",
-        IF({ There are Product Gaps or missing functionality with no workaround available } = "Yes" && Project Current Phase = "Configure", "RED",
-            IF({ There are Product Gaps or missing functionality with no workaround available } = "Yes" && Project Current Phase = "Rollout", "RED",
+IF( Project Current Phase = "Discover and Plan", "N/A",
+    IF( There are Product Gaps or missing functionality with no workaround available = "Yes" && Project Current Phase = "Discover and Plan", "N/A",
+        IF( There are Product Gaps or missing functionality with no workaround available = "Yes" && Project Current Phase = "Configure", "RED",
+            IF( There are Product Gaps or missing functionality with no workaround available = "Yes" && Project Current Phase = "Rollout", "RED",
                 "GREEN"))))
 
 // Field - Team is spending significant time on workarounds to address product gaps
+IF( Project Current Phase = "Discover and Plan", "N/A",
+    IF( Team is spending significant time on workarounds to address product gaps = "Yes" && Project Current Phase = "Discover and Plan", "N/A",
+        IF( Team is spending significant time on workarounds to address product gaps = "Yes" && Project Current Phase = "Configure", "RED",
+            IF( Team is spending significant time on workarounds to address product gaps = "Yes" && Project Current Phase = "Rollout", "RED",
+                "GREEN"))))
 
 // Field - Apptio Platform performance is negatively impacting client or delivery
+IF( Project Current Phase = "Discover and Plan", "N/A",
+    IF( Apptio Platform performance is negatively impacting client or delivery = "Yes" && Project Current Phase = "Discover and Plan", "N/A",
+        IF( Apptio Platform performance is negatively impacting client or delivery = "Yes" && Project Current Phase = "Configure", "RED",
+            IF( Apptio Platform performance is negatively impacting client or delivery = "Yes" && Project Current Phase = "Rollout", "RED",
+                "GREEN"))))
 
 // Field - Client has been in Technical escalation for more then 3 wks
+IF( Client has been in Technical escalation for more then 3 wks = "Yes" && Project Current Phase = "Discover and Plan", "AMBER",
+    IF( Client has been in Technical escalation for more then 3 wks = "Yes" && Project Current Phase = "Configure", "RED",
+        IF( Client has been in Technical escalation for more then 3 wks = "Yes" && Project Current Phase = "Rollout", "RED",
+            "GREEN")))
 
 ///////////////////////////////////
 // Section - Deviation from CSP //
 /////////////////////////////////
-..
+IF(Project Current Phase = "Discover and Plan" && RAG - MVP for CSP not met before UC alignment} ="RED", "RED",
+    IF(Project Current Phase = "Discover and Plan" && {RAG - Data provided will not meet CSP outcome} ="AMBER" || {RAG - Validated Use Case does not align to CSP Biz Outcome} ="AMBER", "AMBER",
+
+       IF(Project Current Phase = "Configure" && RAG - MVP for CSP not met before UC alignment } ="RED" || {RAG - Data provided will not meet CSP outcome} ="RED" || {RAG - Validated Use Case does not align to CSP Biz Outcome} ="RED", "RED",
+
+            IF(Project Current Phase = "Rollout" && RAG - MVP for CSP not met before UC alignment } ="RED" || {RAG - Data provided will not meet CSP outcome} ="RED" || {RAG - Validated Use Case does not align to CSP Biz Outcome} ="RED", "RED",
+                "GREEN"))))
+
 
 // Field - MVP for CSP not met before UC alignment
+IF( MVP for CSP not met before UC alignment = "Yes" && Project Current Phase = "Discover and Plan", "RED",
+    IF( MVP for CSP not met before UC alignment = "Yes" && Project Current Phase = "Configure", "RED",
+        IF( MVP for CSP not met before UC alignment = "Yes" && Project Current Phase = "Rollout", "RED",
+            "GREEN")))
 
 // Field - Data provided will not meet CSP outcome/success criteria
-
-// Field - Validated Use Case does not align to CSP Biz Outcome/success criteria
+IF( {Data provided will not meet CSP outcome-success criteria} = "Yes" && Project Current Phase = "Discover and Plan", "AMBER",
+    IF( {Data provided will not meet CSP outcome-success criteria} = "Yes" && Project Current Phase = "Configure", "RED",
+        IF( {Data provided will not meet CSP outcome-success criteria} = "Yes" && Project Current Phase = "Rollout", "RED",
+            "GREEN")))
+// Field - Validated Use Case does not align to CSP Biz Outcome-success criteria
+IF( {Validated Use Case does not align to CSP Biz Outcome-success criteria} = "Yes" && Project Current Phase = "Discover and Plan", "AMBER",
+    IF( {Validated Use Case does not align to CSP Biz Outcome-success criteria} = "Yes" && Project Current Phase = "Configure", "RED",
+        IF( {Validated Use Case does not align to CSP Biz Outcome-success criteria} = "Yes" && Project Current Phase = "Rollout", "RED",
+            "GREEN")))
